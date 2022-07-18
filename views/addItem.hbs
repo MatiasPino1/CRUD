@@ -1,0 +1,51 @@
+<form  action="addItem" method="POST" enctype="multipart/form-data">
+  <div class="mb-3">
+    <label for="name" class="form-label">Nombre:</label>
+    <input type="text" class="form-control" id="name" name="name">
+  </div>
+   <div class="mb-3">
+    <label for="origin" class="form-label">Origen:</label>
+    <input type="text" class="form-control" id="origin" name="origin">
+  </div>
+    <div class="mb-3">
+    <label for="description" class="form-label">Descripcion:</label>
+    <textarea class="form-control" id="description" name="description" rows="6" cols="48" maxlength="280"> </textarea>
+  </div>
+  <div class="radio">
+<h4>Intensidad</h4>
+<label for="1">1</label>
+<input type="radio" name="intensity" value="1">
+<label for="2">2</label>
+<input type="radio" name="intensity" value="2">
+<label for="3">3</label>
+<input type="radio" name="intensity" value="3">
+<label for="4">4</label>
+<input type="radio" name="intensity" value="4">
+<label for="5">5</label>
+<input type="radio" name="intensity" value="5">
+<label for="6">6</label>
+<input type="radio" name="intensity" value="6">
+<label for="7">7</label>
+<input type="radio" name="intensity" value="7">
+<label for="8">8</label>
+<input type="radio" name="intensity" value="8">
+<label for="9">9</label>
+<input type="radio" name="intensity" value="9">
+<label for="10">10</label>
+<input type="radio" name="intensity" value="10">
+  </div>
+    <div class="mb-3">
+    <label for="presentation" class="form-label">Presentacion:</label>
+    <input type="text" class="form-control" id="presentation" name="presentation">
+  </div>
+  <div class="mb-3">
+    <label for="imageFile" class="form-label">Imagen:</label>
+    <input type="file" class="form-control" id="imageFile" name="imageFile">
+  </div>
+  <div class="mb-3">
+    <label for="price" class="form-label">Precio:</label>
+    <input type="text" class="form-control" id="price" name="price">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <a href="/"><input type="button" value="Cancelar" class="btn btn-secondary"></a>
+</form>

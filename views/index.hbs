@@ -1,0 +1,34 @@
+<table class="table my-5">
+  <thead>
+      <tr class="text-center">
+          <th colspan="7">
+              <a href="/addItem"><button class="btn btn-primary">Agregar</button></a>
+          </th>
+      </tr>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Origen</th>
+      <th scope="col">Presentacion</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Imagen</th>
+      <th scope="col" class="text-center">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        {{#each data}}
+     <td>{{id}}</td>
+     <td>{{name}}</td>
+     <td>{{origin}}</td>
+     <td>{{presentation}}</td>
+     <td>${{price}}</td>
+     <td><img src="{{imageURL}}" alt="foto de producto"></td>
+     <td class="text-center">
+       <a href="/handleEdit/{{id}}"><button class="btn btn-danger">Borrar</button></a>  
+       <a href="/handleEdit/{{id}}"><button class="btn btn-warning">Cambiar</button></a>
+     </td>
+    </tr>
+     {{/each}}
+  </tbody>
+</table>
