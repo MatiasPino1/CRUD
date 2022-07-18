@@ -2,10 +2,10 @@ const mysql=require("mysql")
 const util=require("util")
 const pool=mysql.createPool({
     connectionLimit:10,
-    host:"localhost",
-    user:"root",
-    database:"coffe_house",
-    password:""
+    host:process.env.db_host,
+    user:process.env.db_user,
+    database:process.env.db_name,
+    password:process.env.db_pass
 })
 
 pool.query=util.promisify(pool.query)

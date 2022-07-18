@@ -1,9 +1,10 @@
 const express=require("express")
+require("dotenv").config()
 const app=express()
 const path=require("path")
 const fileupload=require("express-fileupload")
 const routeIndex=require("./router/index")
-const port=process.env.PORT || 8000
+const port=process.env.PORT
 const hbs=require("hbs")
 app.set("view engine","hbs")
 hbs.registerPartials(path.join(__dirname,"./views/partials"))
