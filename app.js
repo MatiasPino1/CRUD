@@ -2,7 +2,7 @@ const express=require("express")
 const app=express()
 const fileupload=require("express-fileupload")
 const routeIndex=require("./router/index")
-const PORT=3030;
+const port=process.env.PORT;
 const hbs=require("hbs")
 const path=require("path")
 app.set("view engine","hbs")
@@ -21,6 +21,6 @@ app.use("/",routeIndex)
 
 
 
-app.listen(PORT,(err=>{
-    err?console.log("Ha ocurrido un error al iniciar el servidor"):console.log(`Servidor corriendo en http://localhost:${PORT}`)
+app.listen(port,(err=>{
+    err?console.log("Ha ocurrido un error al iniciar el servidor"):console.log(`Servidor corriendo en http://localhost:${port}`)
 }))
