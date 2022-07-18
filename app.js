@@ -1,10 +1,10 @@
 const express=require("express")
 const app=express()
+const path=require("path")
 const fileupload=require("express-fileupload")
 const routeIndex=require("./router/index")
 const port=process.env.PORT;
 const hbs=require("hbs")
-const path=require("path")
 app.set("view engine","hbs")
 hbs.registerPartials(path.join(__dirname,"./views/partials"))
 
@@ -14,7 +14,6 @@ app.use(fileupload({
     tempFileDir : "/tmp/"
 }));
 app.use(express.static(path.join(__dirname,"./public")))
-app.set("views",path.join(__dirname,"./views"))
 app.use(express.urlencoded({extended:false}))
 
 app.use("/",routeIndex)
